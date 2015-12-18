@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <meta charset="utf-8" /> 
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <link type="text/css" rel="stylesheet" href="css/materialize.css" />
+        <link type="text/css" rel="stylesheet" href="css/icons.css" >
+        <title>Showing</title>
+</head>
+<body class="background-begin">
+    <div class="row">
+      <div class="row">
+      <div class="col s12">
+            <div class="col s12">
+              <img src="imgs/logoCompany.png" class="responsive-img center-img">
+            </div>
+        </div>
+      </div>
+    </div>
+    <form class="col s12">
+      <div class="row">
+        <div class="input-field col s12">
+          <i class="material-icons prefix">perm_identity</i>
+          <input id="firstName" type="text">
+          <label for="firstName">First Name</label>
+        </div>
+        <div class="input-field col s12">
+          <i class="material-icons prefix">perm_identity</i>
+          <input id="lastName" type="text">
+          <label for="lastName">Last Name</label>
+        </div>
+        <div class="input-field col s12">
+          <i class="material-icons prefix">store_mall_directory</i>
+          <input id="companyName" type="text">
+          <label for="companyName">Company Name</label>
+        </div>
+        <div class="input-field col s12">
+          <i class="material-icons prefix">email</i>
+          <input id="emailAddress" type="text">
+          <label for="emailAddress">Email Address</label>
+        </div>
+        <div class="input-field col s12">
+          <i class="material-icons prefix">phone</i>
+          <input id="phoneNumber" type="text">
+          <label for="phoneNumber">Phone Number</label>
+        </div>
+        <div class="input-field col s12">
+          <i class="material-icons prefix">lock_outline</i>
+          <input id="pasword" type="password">
+          <label for="pasword">Password</label>
+        </div>
+        <div class="input-field col s12">
+          <i class="material-icons prefix">lock_outline</i>
+          <input id="confirmPassword" type="password">
+          <label for="confirmPassword">Confirm Password</label>
+        </div>
+
+      </div>
+       <div class="">
+          <div class="card-panel center-text grey waves-effect waves-block waves-light" onclick="menu.success();">
+            <span class="white-text">
+                Sign up.
+            </span>
+          </div>
+
+        <div class="card-panel center-text waves-effect waves-block waves-light"  style="background:rgb(34, 50, 67);"  onclick="menu.signup();">
+          <span class="white-text">
+            Have an account? Sign in.
+          </span>
+        </div>
+      </div>
+    </form>
+
+   	<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+   	<script type="text/javascript" src="js/materialize.min.js"></script>
+    <script type="text/javascript" src="js/controller.js"></script>
+ 
+ </body>
+</html>

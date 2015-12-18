@@ -1,0 +1,142 @@
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Material Icons'), local('MaterialIcons-Regular'), url(../font/roboto/icons.woff2) format('woff2');
+}
+html{ margin: 0; padding: 0; }
+.background-begin { 
+  background: url("../imgs/backLoad.png") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
+  -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
+  -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
+
+}
+.background-index { 
+  background: url("../imgs/backLoad.png"); 
+
+  -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
+  -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
+  -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
+
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  color: #fff;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+}
+.text-bar{
+  float: right;
+  font-size: 15px;
+  display: inline-block;
+  color: #C6C6C7;
+  margin-top: 5.5%;
+}
+
+.text-right{
+      float: right !important;
+}
+
+.text-black{
+  color: black !important;
+}
+.text-white{
+  color:white !important;
+}
+.texy-blue{
+  color:rgb(97, 143, 198) !important;
+}
+.back-grey{
+  background-color:#d6d6d6 !important;
+}
+.back-blue{
+  background-color:rgb(81, 133, 193) !important; 
+}
+.back-orange{
+  background-color:rgb(255, 89, 37) !important;
+}
+.list-tips{
+  background-color:#E1E1E1 !important; 
+  margin-bottom:-2% !important;
+}
+/* label color */
+   input{
+     color: #fff;
+   }
+
+    .input-field label {
+     color: #fff;
+   }
+   /* label focus color */
+   .input-field input[type=text]:focus + label,    .input-field input[type=password]:focus + label {
+     color: #fff;
+   }
+   /* label underline focus color */
+   .input-field input[type=text]:focus, .input-field input[type=password]:focus {
+     border-bottom: 1px solid #fff;
+     box-shadow: 0 1px 0 0 #fff;
+      color: #fff;
+   }
+   /* valid color */
+   .input-field input[type=text].valid,.input-field input[type=password].valid {
+     border-bottom: 1px solid #fff;
+     box-shadow: 0 1px 0 0 #fff;
+      color: #fff;
+   }
+   /* invalid color */
+   .input-field input[type=text].invalid,.input-field input[type=password].invalid {
+     border-bottom: 1px solid #fff;
+     box-shadow: 0 1px 0 0 #fff;
+      color: #fff;
+   }
+   /* icon prefix focus color */
+   .input-field .prefix.active {
+     color: #fff;
+   }
+.center-img{
+  display: block; 
+  margin: 0px auto;
+}
+
+.cardIndex{
+  padding:6%;
+  text-align: center;
+}
+.cardIndexTour{
+  padding:8%;
+  text-align: center;
+  background-color: rgba(19, 16, 15,0.9);
+}
+ @media only screen and (min-width:524px){
+      .card-panel{
+        padding:1%;
+      }
+      .cardIndexTour{
+        padding: 2%;
+      }
+  }
+
+ @media only screen and  (max-width: 320px) and (max-height: 480px) {
+      .card-panel{
+        padding:4%;
+      }
+      .cardIndexTour{
+        padding: 2%;
+      }
+  }
