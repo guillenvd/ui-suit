@@ -5,6 +5,7 @@
         <param name="android-package" value="org.apache.cordova.whitelist.WhitelistPlugin" />
         <param name="onload" value="true" />
     </feature>
+    <preference name="webView" value="org.crosswalk.engine.XWalkWebViewEngine" />
     <allow-intent href="market:*" />
     <name>testDesign</name>
     <description>

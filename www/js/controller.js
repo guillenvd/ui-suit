@@ -13,5 +13,9 @@ var menu = {
 				},
 			success:function(){
 					location.href = "success.html";
-				}
+				},
+			listngAgent:function(){
+					location.href = "listingAgent.html";
+					}
+			
 			};
