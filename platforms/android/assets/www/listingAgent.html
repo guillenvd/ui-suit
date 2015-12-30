@@ -34,7 +34,7 @@
 
     <div class='nav-bar-menu'>
 
-          <div class="col s12 div-userInfo">
+          <div class="col s12 div-userInfo size">
             <div class="col s4 div-avatar">
                  <img src="imgs/backLoad.png" alt="" class="circle responsive-img">
             </div>
@@ -48,9 +48,15 @@
                 Change<br>nav type
               </p>
               <p>
-                <i class="material-icons " style="color:#686868;">view_carousel</i>
-              </p>
+                  <i class="material-icons field" style="color:#686868;">view_carousel</i>
+               </p>
             </div>
+            <ul class="list">
+              <li class="title-select">choose navigation menu</li>
+              <li>Showing Note</li>
+              <li>Buyer's Agent Nav</li>
+              <li>Listing Agent Nav</li>
+            </ul>
           </div>
 
 
@@ -120,6 +126,7 @@
                 </div>
             </div>
         </div>
+
         <div class="col s12 listing-card divLast">
             <div class="col s8 text-grey " style="margin-top:25px;">
                 <div class="col s12 listing-card">
@@ -416,8 +423,34 @@
   <script type="text/javascript" src="js/materialize.min.js"></script>
   <script src="js/jquery.touchSwipe.min.js"></script>
 
-  <script>
-      $(document).ready(function() {
+  <script>(function($){
+  $.fn.styleddropdown = function(){
+    return this.each(function(){
+      var obj = $(this)
+      obj.find('.field').click(function() { //onclick event, 'list' fadein
+        obj.find('.list').fadeIn(400);        
+       /* var w = $(window).width() ;
+        var h = $(window).height();
+        obj.find('.list').css('width', w);
+        obj.find('.list').css('height', w);*/
+          obj.find('.list').hover(function(){ },function(){
+                                    $(this).fadeOut(400);
+                                  });
+
+
+
+      });
+
+      obj.find('.list li').click(function() { //onclick event, change field value with selected 'list' item and fadeout 'list'
+      obj.find('.field').val($(this).html());
+      obj.find('.list').fadeOut(400);
+      });
+    });
+  };
+})(jQuery);
+      $(document).ready(function() {$(function(){
+  $('.size').styleddropdown();
+});
         var w = $(window).width() * 0.85;
         var wf = $(window).width();
         var h = $(window).height();
