@@ -23,10 +23,7 @@
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
     </platform>
-    <preference name="SplashScreen" value="none"/>
-    <preference name="show-splash-screen-spinner" value="false" />           <!-- ios: if set to false, the spinner won't appear on the splash screen during app loading -->
-    <preference name="auto-hide-splash-screen"    value="false" />           <!-- ios: if set to false, the splash screen must be hidden using a JavaScript API -->
-    <gap:plugin name="org.apache.cordova.splashscreen" />
+
     <content src="index.html" />
     <preference name="StatusBarOverlaysWebView" value="true" /><preference name="StatusBarBackgroundColor" value="#000000" /><preference name="StatusBarBackgroundColor" value="#000000" />
     <preference name="orientation" value="portrait" /><feature name="StatusBar">
