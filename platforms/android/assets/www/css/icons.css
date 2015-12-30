@@ -478,7 +478,7 @@
       border:solid 1px rgb(81, 133, 193) !important;
       position:absolute;
       width: 92%  !important;
-      top: 75% !important;       
+      top: 85% !important;       
       z-index:999;
       margin:0;  
       list-style:none;
@@ -499,7 +499,8 @@
       text-align: left !important;
     }
     .size>ul.list li:hover {
-      background:rgb(81, 133, 193) !important; color:#fff;
+      background:rgb(81, 133, 193) !important; 
+      color:#fff !important;
     }
     .size>ul.list li.title-select { 
       text-transform: uppercase !important;
@@ -508,3 +509,17 @@
       font-size: 12px;  pointer-events: none;
        cursor: default;
     }
+    .check-down{
+      font-size:20px; color:#1980FA; float:right !important; margin-right:20px;
+    }
+
+.popover-arrow {
+  position: absolute;
+  top: -18px;
+  left: 88%;
+  border-left: 18px solid transparent;
+  border-right: 18px solid transparent;
+  border-bottom: 18px solid white;
+  width: 0;
+  height: 0;
+  }
