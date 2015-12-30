@@ -380,18 +380,7 @@
         padding: 10px 0px 10px 0px !important;
   }
 
-body::-webkit-scrollbar {
-    width: 0.5em;
-}
- 
-body::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-}
- 
-body::-webkit-scrollbar-thumb {
-  background-color: darkgrey;
-  outline: 1px solid slategrey;
-}
+
   /*  Menu panel  */
   .nav-bar-menu{
     z-index: 4!important;
@@ -405,7 +394,19 @@ body::-webkit-scrollbar-thumb {
     margin-right: 0px !important;
     margin-left: 0px !important;
     overflow: scroll;
-
+  }
+  .nav-bar-menu-close{
+    z-index: 3!important;
+    background-color:rgba(32, 33, 42,0.8)!important;
+    margin: 0em !important;
+    left: 0em !important; 
+    right: 0em !important; 
+    top: 0em !important;
+    position: fixed;
+    display: none;
+    margin-right: 0px !important;
+    margin-left: 0px !important;
+    overflow: scroll;
   }
   .div-userInfo{
         padding: 20px 0px 20px 15px !important;

@@ -14,7 +14,7 @@
   <div class="row">
     <div class="col s12 nav-bar" id="top">
       <div class="col s8 ftext-left" >
-        <i class="material-icons" style="color:#C6C6C7; margin-top:5.5%;" onclick=" $( '.nav-bar-menu' ).toggle();">reorder</i>
+        <i class="material-icons" style="color:#C6C6C7; margin-top:5.5%;" onclick="$( '.nav-bar-menu' ).toggle();$( '.nav-bar-menu-close' ).toggle();">reorder</i>
         <p class="text-bar" >Showing Suit Sign Up</p>
       </div>
       <div class="col s4" style="margin-top:4%;">      
@@ -28,7 +28,8 @@
     </div>
 
 
-
+    <div class='nav-bar-menu-close'  onclick="$( '.nav-bar-menu' ).toggle();$( '.nav-bar-menu-close' ).toggle();">
+    </div>
 
 
     <div class='nav-bar-menu'>
@@ -56,60 +57,6 @@
 
           <div class="col s12 div-menu upper text-grey">
               <div class="div-opt " >
-                <i class="menu-icons ">dashboard</i> dashboard
-              </div>
-              <div class="div-opt ">
-                <i class="menu-icons ">notifications_none</i>notifications
-              </div>
-              <div class="div-opt ">
-                <i class="menu-icons ">list</i>listings
-              </div>
-
-              <div class="div-opt ">
-                <i class="menu-icons ">event_note</i>calendar
-              </div>
-              <div class="div-opt ">
-                <i class="menu-icons ">people_outline</i>contacts
-              </div>
-              <div class="div-opt ">
-                <i class="menu-icons ">lock_outline</i>lockbox
-              </div> <div class="div-opt " >
-                <i class="menu-icons ">dashboard</i> dashboard
-              </div>
-              <div class="div-opt ">
-                <i class="menu-icons ">notifications_none</i>notifications
-              </div>
-              <div class="div-opt ">
-                <i class="menu-icons ">list</i>listings
-              </div>
-
-              <div class="div-opt ">
-                <i class="menu-icons ">event_note</i>calendar
-              </div>
-              <div class="div-opt ">
-                <i class="menu-icons ">people_outline</i>contacts
-              </div>
-              <div class="div-opt ">
-                <i class="menu-icons ">lock_outline</i>lockbox
-              </div> <div class="div-opt " >
-                <i class="menu-icons ">dashboard</i> dashboard
-              </div>
-              <div class="div-opt ">
-                <i class="menu-icons ">notifications_none</i>notifications
-              </div>
-              <div class="div-opt ">
-                <i class="menu-icons ">list</i>listings
-              </div>
-
-              <div class="div-opt ">
-                <i class="menu-icons ">event_note</i>calendar
-              </div>
-              <div class="div-opt ">
-                <i class="menu-icons ">people_outline</i>contacts
-              </div>
-              <div class="div-opt ">
-                <i class="menu-icons ">lock_outline</i>lockbox
-              </div> <div class="div-opt " >
                 <i class="menu-icons ">dashboard</i> dashboard
               </div>
               <div class="div-opt ">
@@ -472,10 +419,12 @@
   <script>
       $(document).ready(function() {
         var w = $(window).width() * 0.85;
+        var wf = $(window).width();
         var h = $(window).height();
         $('.nav-bar-menu').css('width', w);
         $('.nav-bar-menu').css('height', h);
-
+        $('.nav-bar-menu-close').css('width', wf);
+        $('.nav-bar-menu-close').css('height', h);
 
              /* fix vertical when not overflow
           call fullscreenFix() if .fullscreen content changes */
@@ -534,6 +483,15 @@
         if ( direction != 'up' && direction != 'down'){  
            console.log( $(this).index() );
            $(this).hide(); 
+          }
+          console.log(direction);
+        },
+      });
+      $(".nav-bar-menu, .nav-bar-menu-close").swipe( {
+        //Generic swipe handler for all directions
+        swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
+        if ( direction =='left'){  
+           $( '.nav-bar-menu' ).toggle();$( '.nav-bar-menu-close' ).toggle();
           }
           console.log(direction);
         },
