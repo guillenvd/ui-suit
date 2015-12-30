@@ -477,18 +477,19 @@
       display:none;  
       border:solid 1px rgb(81, 133, 193) !important;
       position:absolute;
-      width: 92%;
-      top: 69%;       z-index:999;
+      width: 92%  !important;
+      top: 75% !important;       
+      z-index:999;
       margin:0;  
       list-style:none;
       background:#fff;
       color:#333;
-      -moz-border-radius:5px; 
-      webkit-border-radius:5px; 
-      border-radius:5px;
-      -moz-box-shadow:0 0 5px #999; 
-      -webkit-box-shadow:0 0 5px #999; 
-      box-shadow:0 0 5px #999
+      -moz-border-radius:20px; 
+      webkit-border-radius:20px; 
+      border-radius:20px;
+      -moz-box-shadow:0 0 20px #999; 
+      -webkit-box-shadow:0 0 20px #999; 
+      box-shadow:0 0 20px #999
     }
     .size>ul.list li {
       border-top: solid 1px #ccc;
