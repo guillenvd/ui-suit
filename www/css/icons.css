@@ -35,6 +35,33 @@
     font-feature-settings: 'liga';
   }
 
+  .menu-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    float: left !important;
+    font-size: 20px;  /* Preferred icon size */
+    display: inline-block;
+    width: 1em;
+    height: 1em;  
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+    color: #686868; 
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+    margin-right: 3px;
+  }
+
   @font-face {
     font-family: 'Avenir LT Std 35 Light';
     font-style: normal;
@@ -47,6 +74,11 @@
       -webkit-user-select: auto !important;
       -webkit-touch-callout: none !important;
       -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;
+      user-select: none !important;
+      -moz-user-select: -moz-none !important;
+      -khtml-user-select: none !important;
+      -webkit-user-select: none !important;
+
     }
   p{
       margin: 0;
@@ -250,11 +282,12 @@
   }     
 
   .xsText{
-    color:#4c4c4c !important;
     font-size: 12px;  
-    margin-left: 3%;  
   }
-
+  .xxsText{
+    color:#4c4c4c !important;
+    font-size: 8px;  
+  }
   .text-card{
     color:#4c4c4c !important;
     margin-left: 3%;
@@ -270,7 +303,7 @@
       position: fixed;
       top: 0;
       left: 0;
-      z-index: 999;
+      z-index: 3;
       width: 100%;
       
     }
@@ -331,10 +364,74 @@
   .listing-card, img{
     margin-right: 0px !important;
     margin-bottom: 0px !important;
-    padding: 0px 0px 0px 0px !important;display: block;
+    padding: 0px 0px 0px 0px !important;
+    display: block;
   }   
+  .nav-bar{
+    background-color:rgb(55, 61, 74) !important; 
+    color:#C6C6C7 !important;
+    padding: 14px 0px 0px 0px !important;
+
+  }
+  .margin-bt{
+        padding: 10px 0px 10px 0px !important;
+  }
 
 
+  /*  Menu panel  */
+  .nav-bar-menu{
+    z-index: 4!important;
+    background-color:#E1E1E1 !important;
+    margin: 0em !important;
+    left: 0em !important; 
+    right: 0em !important; 
+    top: 0em !important;
+    position: fixed;
+    display: none;
+    margin-right: 0px !important;
+    margin-left: 0px !important;
+
+  }
+  .div-userInfo{
+        padding: 20px 0px 20px 15px !important;
+
+  }
+
+  .div-avatar{
+    margin-right: 0px !important;
+    margin-bottom: 0px !important;
+    padding: 0px 20px 0px 0px !important;
+    display: block;
+  }
+
+
+  .text-blue-menu{
+    color:rgb(81, 133, 193) !important;
+    font-size: 12px;  
+  }
+  .upper{
+    text-transform: uppercase;
+  }
+  .circle{
+    border-radius: 50%;
+    -webkit-border-top-right-radius: 50%
+  }
+
+  .div-menu{
+    margin: 0em !important;
+    left: 0em !important; 
+    right: 0em !important; 
+    top: 0em !important;
+    margin-right: 0px !important;
+    margin-left: 0px !important;
+    padding: 20px 0px 0px 0px !important;
+  }
+
+  .div-opt{
+    padding: 10px 0px 10px 10px !important;
+    border-top:solid #CECECE 2px  !important;
+    margin-left: 20px;
+  }
 
   @media only screen and (min-width:524px){
         .card-panel{

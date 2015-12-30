@@ -7,10 +7,10 @@
         "files": {}
     },
     "installed_plugins": {
-        "cordova-plugin-crosswalk-webview": {
+        "cordova-plugin-whitelist": {
             "PACKAGE_NAME": "com.mind.test"
         },
-        "cordova-plugin-whitelist": {
+        "cordova-plugin-statusbar": {
             "PACKAGE_NAME": "com.mind.test"
         }
     },

@@ -12,9 +12,9 @@
 </head>
 <body class="none">
   <div class="row">
-    <div class="col s12" style="background-color:rgb(55, 61, 74); color:#C6C6C7;" id="top">
+    <div class="col s12 nav-bar" id="top">
       <div class="col s8" >
-        <i class="material-icons " style="color:#C6C6C7; margin-top:5.5%;" onclick="">reorder</i>
+        <i class="material-icons " style="color:#C6C6C7; margin-top:5.5%;" onclick=" $( '.nav-bar-menu' ).toggle();">reorder</i>
         <p class="text-bar" >Showing Suit Sign Up</p>
       </div>
       <div class="col s4" style="margin-top:4%;">      
@@ -26,8 +26,78 @@
         </div>
       </div>
     </div>
-    <div style="width:100%; height:30px; display:block;"></div>
-    <div  >
+
+
+
+
+
+    <div class='nav-bar-menu'>
+
+          <div class="col s12 div-userInfo">
+            <div class="col s4 div-avatar">
+                 <img src="imgs/backLoad.png" alt="" class="circle responsive-img">
+            </div>
+            <div class="col s5">
+                <p class="upper text-black"> hello sandra </p>
+                <p class="text-blue-menu">Next Showing: <br></p>
+                <p class="text-blue-menu">10/23/15</p>
+            </div>
+            <div class="col s3 center-text">
+              <p class="xxsText upper center-text">
+                Change nav type
+              </p>
+              <p>
+                <i class="material-icons " style="color:#686868;">view_carousel</i>
+              </p>
+            </div>
+          </div>
+
+
+
+          <div class="col s12 div-menu upper text-grey">
+              <div class="div-opt " >
+                <i class="menu-icons ">dashboard</i> dashboard
+              </div>
+              <div class="div-opt ">
+                <i class="menu-icons ">notifications_none</i>notifications
+              </div>
+              <div class="div-opt ">
+                <i class="menu-icons ">list</i>listings
+              </div>
+
+              <div class="div-opt ">
+                <i class="menu-icons ">event_note</i>calendar
+              </div>
+              <div class="div-opt ">
+                <i class="menu-icons ">people_outline</i>contacts
+              </div>
+              <div class="div-opt ">
+                <i class="menu-icons ">lock_outline</i>lockbox
+              </div>
+              <div class="div-opt ">
+                <i class="menu-icons ">tune</i>settings
+              </div>
+              <div class="div-opt ">
+                <i class="menu-icons ">more_horiz</i>more
+              </div>
+              <div class="div-opt ">
+                <i class="menu-icons ">highlight_off</i>Sign
+              </div>
+              <div class="div-opt " onclick=" $( '.nav-bar-menu' ).toggle();">
+                <i class="menu-icons ">highlight_off</i>close
+              </div>
+
+           </div>
+
+
+    </div>
+
+
+
+
+
+
+    <div style="width:100%; height:44px; display:block;"></div>
     <ul class="tabs" style="">
         <li class="tab col s3"><a class="active" href="#lContent">LISTINGS</a></li>
         <li class="tab col s3"><a href="#sContent">SHOWINGS</a></li>
@@ -37,15 +107,15 @@
         <div class="not-fullscreen background" style="background-image:url('http://www.iroonie.com/wp-content/uploads/2010/05/minimalist-dining-room-idea.jpg');" data-img-width="1600" data-img-height="1064">
             <div class="content-a">
                 <div class="content-b">
-                  <P class="pWhite">
+                  <p class="pWhite">
                     Thursday, 15 
                   </p>
                   <p>
                     <i class="m ">october 2015</i>
                   </p>
-                  <P  class="pWhite">
+                  <p  class="pWhite">
                     6 LISTINGS
-                  <P>
+                  </p>
                 </div>
             </div>
         </div>
@@ -67,7 +137,7 @@
                 <img src="img/house1.jpg" style="width:100% !important; height:163px !important;  " class="listing-card divLast" >
             </div>
         </div>
-                <div class="col s12 listing-card divLast">
+       <div class="col s12 listing-card divLast">
             <div class="col s8 text-grey " style="margin-top:25px;">
                 <div class="col s12 listing-card">
                   <font class="title-card">68855 teesdale ave</font>
@@ -85,7 +155,7 @@
                 <img src="img/house1.jpg" style="width:100% !important; height:163px !important;  " class="listing-card divLast" >
             </div>
         </div>
-                <div class="col s12 listing-card divLast">
+        <div class="col s12 listing-card divLast">
             <div class="col s8 text-grey " style="margin-top:25px;">
                 <div class="col s12 listing-card">
                   <font class="title-card">68855 teesdale ave</font>
@@ -103,7 +173,7 @@
                 <img src="img/house1.jpg" style="width:100% !important; height:163px !important;  " class="listing-card divLast" >
             </div>
         </div>
-                <div class="col s12 listing-card divLast">
+        <div class="col s12 listing-card divLast">
             <div class="col s8 text-grey " style="margin-top:25px;">
                 <div class="col s12 listing-card">
                   <font class="title-card">68855 teesdale ave</font>
@@ -187,153 +257,153 @@
       
     </div>
     <div id="cContent" >
-    <div>
-      <div class="cDay text-grey back-grey center-text ">
-          <p >Sun</p>
-          <div id="cNumber" class="text-wBlack">
-           7
+          <div>
+            <div class="cDay text-grey back-grey center-text ">
+                <p >Sun</p>
+                <div id="cNumber" class="text-wBlack">
+                 7
+                </div>
+            </div>
+            <div class="cDay text-grey back-grey center-text ">
+                <p>Mon</p>
+                <div id="cNumber" class="text-wBlack">
+                 8
+                </div>
+            </div>
+            <div class="cDay text-white back-greenSky center-text ">
+                <p>Tues</p>
+                <div id="cNumber" class="text-white">
+                 9
+                </div>
+            </div>
+            <div class="cDay text-grey back-grey center-text ">
+                <p>Wed</p>
+                <div id="cNumber" class="text-wBlack">
+                 10
+                </div>
+            </div>
+            <div class="cDay text-grey back-grey center-text ">
+                <p>Thu</p>
+                <div id="cNumber" class="text-wBlack">
+                 11
+                </div>
+            </div>
+            <div class="cDay text-grey back-grey center-text ">
+                <p>Fri</p>
+                <div id="cNumber" class="text-wBlack">
+                 12
+                </div>
+            </div>
+            <div class="cDay text-grey back-grey center-text ">
+                <p>Sat</p>
+                <div id="cNumber" class="text-wBlack">
+                 13
+                </div>
+            </div>
           </div>
-      </div>
-      <div class="cDay text-grey back-grey center-text ">
-          <p>Mon</p>
-          <div id="cNumber" class="text-wBlack">
-           8
-          </div>
-      </div>
-      <div class="cDay text-white back-greenSky center-text ">
-          <p>Tues</p>
-          <div id="cNumber" class="text-white">
-           9
-          </div>
-      </div>
-      <div class="cDay text-grey back-grey center-text ">
-          <p>Wed</p>
-          <div id="cNumber" class="text-wBlack">
-           10
-          </div>
-      </div>
-      <div class="cDay text-grey back-grey center-text ">
-          <p>Thu</p>
-          <div id="cNumber" class="text-wBlack">
-           11
-          </div>
-      </div>
-      <div class="cDay text-grey back-grey center-text ">
-          <p>Fri</p>
-          <div id="cNumber" class="text-wBlack">
-           12
-          </div>
-      </div>
-      <div class="cDay text-grey back-grey center-text ">
-          <p>Sat</p>
-          <div id="cNumber" class="text-wBlack">
-           13
-          </div>
-      </div>
-    </div>
           <div class="col s12">
-          <div class="card">
-            <P class="title-card"> SHOWING WITH BUYER</P> 
-            <p class="text-card text-grey">
-              <i class="material-icons">access_time</i>10:00 - 11:00 AM 
-              <i class="material-icons">event</i> Tues, Nov, 10, 2015
-                <p class="text-card">  
-                  <i class="material-icons">place</i> 6855 Teesdale Rd. 
+              <div class="card">
+                <P class="title-card"> SHOWING WITH BUYER</P> 
+                <p class="text-card text-grey">
+                  <i class="material-icons">access_time</i>10:00 - 11:00 AM 
+                  <i class="material-icons">event</i> Tues, Nov, 10, 2015
+                    <p class="text-card">  
+                      <i class="material-icons">place</i> 6855 Teesdale Rd. 
+                    </p>
                 </p>
-            </p>
+              </div>
           </div>
-      </div>
 
-      <div class="col s12">
-          <div class="card">
-            <P class="title-card"> SHOWING WITH BUYER</P> 
-            <p class="text-card text-grey">
-              <i class="material-icons">access_time</i>10:00 - 11:00 AM 
-              <i class="material-icons">event</i> Tues, Nov, 10, 2015
-                <p class="text-card">  
-                  <i class="material-icons">place</i> 6855 Teesdale Rd. 
+          <div class="col s12">
+              <div class="card">
+                <P class="title-card"> SHOWING WITH BUYER</P> 
+                <p class="text-card text-grey">
+                  <i class="material-icons">access_time</i>10:00 - 11:00 AM 
+                  <i class="material-icons">event</i> Tues, Nov, 10, 2015
+                    <p class="text-card">  
+                      <i class="material-icons">place</i> 6855 Teesdale Rd. 
+                    </p>
                 </p>
-            </p>
+              </div>
           </div>
-      </div>
 
-      <div class="col s12">
-          <div class="card">
-            <P class="title-card"> SHOWING WITH BUYER</P> 
-            <p class="text-card text-grey">
-              <i class="material-icons">access_time</i>10:00 - 11:00 AM 
-              <i class="material-icons">event</i> Tues, Nov, 10, 2015
-                <p class="text-card">  
-                  <i class="material-icons">place</i> 6855 Teesdale Rd. 
+          <div class="col s12">
+              <div class="card">
+                <P class="title-card"> SHOWING WITH BUYER</P> 
+                <p class="text-card text-grey">
+                  <i class="material-icons">access_time</i>10:00 - 11:00 AM 
+                  <i class="material-icons">event</i> Tues, Nov, 10, 2015
+                    <p class="text-card">  
+                      <i class="material-icons">place</i> 6855 Teesdale Rd. 
+                    </p>
                 </p>
-            </p>
+              </div>
           </div>
-      </div>
 
-      <div class="col s12">
-          <div class="card">
-            <P class="title-card"> SHOWING WITH BUYER</P> 
-            <p class="text-card text-grey">
-              <i class="material-icons">access_time</i>10:00 - 11:00 AM 
-              <i class="material-icons">event</i> Tues, Nov, 10, 2015
-                <p class="text-card">  
-                  <i class="material-icons">place</i> 6855 Teesdale Rd. 
+          <div class="col s12">
+              <div class="card">
+                <P class="title-card"> SHOWING WITH BUYER</P> 
+                <p class="text-card text-grey">
+                  <i class="material-icons">access_time</i>10:00 - 11:00 AM 
+                  <i class="material-icons">event</i> Tues, Nov, 10, 2015
+                    <p class="text-card">  
+                      <i class="material-icons">place</i> 6855 Teesdale Rd. 
+                    </p>
                 </p>
-            </p>
+              </div>
           </div>
-      </div>
-      <div class="col s12">
-          <div class="card">
-            <P class="title-card"> SHOWING WITH BUYER</P> 
-            <p class="text-card text-grey">
-              <i class="material-icons">access_time</i>10:00 - 11:00 AM 
-              <i class="material-icons">event</i> Tues, Nov, 10, 2015
-                <p class="text-card">  
-                  <i class="material-icons">place</i> 6855 Teesdale Rd. 
+          <div class="col s12">
+              <div class="card">
+                <P class="title-card"> SHOWING WITH BUYER</P> 
+                <p class="text-card text-grey">
+                  <i class="material-icons">access_time</i>10:00 - 11:00 AM 
+                  <i class="material-icons">event</i> Tues, Nov, 10, 2015
+                    <p class="text-card">  
+                      <i class="material-icons">place</i> 6855 Teesdale Rd. 
+                    </p>
                 </p>
-            </p>
+              </div>
           </div>
-      </div>
 
-      <div class="col s12">
-          <div class="card">
-            <P class="title-card"> SHOWING WITH BUYER</P> 
-            <p class="text-card text-grey">
-              <i class="material-icons">access_time</i>10:00 - 11:00 AM 
-              <i class="material-icons">event</i> Tues, Nov, 10, 2015
-                <p class="text-card">  
-                  <i class="material-icons">place</i> 6855 Teesdale Rd. 
+          <div class="col s12">
+              <div class="card">
+                <P class="title-card"> SHOWING WITH BUYER</P> 
+                <p class="text-card text-grey">
+                  <i class="material-icons">access_time</i>10:00 - 11:00 AM 
+                  <i class="material-icons">event</i> Tues, Nov, 10, 2015
+                    <p class="text-card">  
+                      <i class="material-icons">place</i> 6855 Teesdale Rd. 
+                    </p>
                 </p>
-            </p>
+              </div>
           </div>
-      </div>
 
-      <div class="col s12">
-          <div class="card">
-            <P class="title-card"> SHOWING WITH BUYER</P> 
-            <p class="text-card text-grey">
-              <i class="material-icons">access_time</i>10:00 - 11:00 AM 
-              <i class="material-icons">event</i> Tues, Nov, 10, 2015
-                <p class="text-card">  
-                  <i class="material-icons">place</i> 6855 Teesdale Rd. 
+          <div class="col s12">
+              <div class="card">
+                <P class="title-card"> SHOWING WITH BUYER</P> 
+                <p class="text-card text-grey">
+                  <i class="material-icons">access_time</i>10:00 - 11:00 AM 
+                  <i class="material-icons">event</i> Tues, Nov, 10, 2015
+                    <p class="text-card">  
+                      <i class="material-icons">place</i> 6855 Teesdale Rd. 
+                    </p>
                 </p>
-            </p>
+              </div>
           </div>
-      </div>
 
-      <div class="col s12">
-          <div class="card">
-            <P class="title-card"> SHOWING WITH BUYER</P> 
-            <p class="text-card text-grey">
-              <i class="material-icons">access_time</i>10:00 - 11:00 AM 
-              <i class="material-icons">event</i> Tues, Nov, 10, 2015
-                <p class="text-card">  
-                  <i class="material-icons">place</i> 6855 Teesdale Rd. 
+          <div class="col s12">
+              <div class="card">
+                <P class="title-card"> SHOWING WITH BUYER</P> 
+                <p class="text-card text-grey">
+                  <i class="material-icons">access_time</i>10:00 - 11:00 AM 
+                  <i class="material-icons">event</i> Tues, Nov, 10, 2015
+                    <p class="text-card">  
+                      <i class="material-icons">place</i> 6855 Teesdale Rd. 
+                    </p>
                 </p>
-            </p>
+              </div>
           </div>
-      </div>
-    </div>
+        </div>
   </div>
             <!-- <div class="center-text  back-blue text-white col s12 showingCard" >
             <p>
@@ -341,66 +411,69 @@
               <i class="material-icons rotate  xlText">reply</i>
             </p>
         --> 
-      </div>
   <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
   <script type="text/javascript" src="js/materialize.min.js"></script>
     <script src="js/jquery.touchSwipe.min.js"></script>
 
   <script>
-    $(document).ready(function() {
-   /* fix vertical when not overflow
-call fullscreenFix() if .fullscreen content changes */
-function fullscreenFix(){
-    var h = $('body').height();
-    // set .fullscreen height
-    $(".content-b").each(function(i){
-        if($(this).innerHeight() > h){ $(this).closest(".fullscreen").addClass("overflow");
-        }
-    });
-}
-$(window).resize(fullscreenFix);
-fullscreenFix();
+      $(document).ready(function() {
+        var w = $(window).width() * 0.85;
+        var h = $(window).height();
+        $('.nav-bar-menu').css('width', w);
+        $('.nav-bar-menu').css('height', h);
 
-/* resize background images */
-function backgroundResize(){
-    var windowH = $(window).height();
-    $(".background").each(function(i){
-        var path = $(this);
-        // variables
-        var contW = path.width();
-        var contH = path.height();
-        var imgW = path.attr("data-img-width");
-        var imgH = path.attr("data-img-height");
-        var ratio = imgW / imgH;
-        // overflowing difference
-        var diff = parseFloat(path.attr("data-diff"));
-        diff = diff ? diff : 0;
-        // remaining height to have fullscreen image only on parallax
-        var remainingH = 0;
-        if(path.hasClass("parallax")){
-            var maxH = contH > windowH ? contH : windowH;
-            remainingH = windowH - contH;
-        }
-        // set img values depending on cont
-        imgH = contH + remainingH + diff;
-        imgW = imgH * ratio;
-        // fix when too large
-        if(contW > imgW){
-            imgW = contW;
-            imgH = imgW / ratio;
-        }
-        //
-        path.data("resized-imgW", imgW);
-        path.data("resized-imgH", imgH);
-        path.css("background-size", "100%" +"100% ");
-    });
-}
-$(window).resize(backgroundResize);
-$(window).focus(backgroundResize);
-backgroundResize();
+
+             /* fix vertical when not overflow
+          call fullscreenFix() if .fullscreen content changes */
+          function fullscreenFix(){
+              var h = $('body').height();
+              // set .fullscreen height
+              $(".content-b").each(function(i){
+                  if($(this).innerHeight() > h){ $(this).closest(".fullscreen").addClass("overflow");
+                  }
+              });
+          }
+          $(window).resize(fullscreenFix);
+          fullscreenFix();
+          /* resize background images */
+          function backgroundResize(){
+              var windowH = $(window).height();
+              $(".background").each(function(i){
+                  var path = $(this);
+                  // variables
+                  var contW = path.width();
+                  var contH = path.height();
+                  var imgW = path.attr("data-img-width");
+                  var imgH = path.attr("data-img-height");
+                  var ratio = imgW / imgH;
+                  // overflowing difference
+                  var diff = parseFloat(path.attr("data-diff"));
+                  diff = diff ? diff : 0;
+                  // remaining height to have fullscreen image only on parallax
+                  var remainingH = 0;
+                  if(path.hasClass("parallax")){
+                      var maxH = contH > windowH ? contH : windowH;
+                      remainingH = windowH - contH;
+                  }
+                  // set img values depending on cont
+                  imgH = contH + remainingH + diff;
+                  imgW = imgH * ratio;
+                  // fix when too large
+                  if(contW > imgW){
+                      imgW = contW;
+                      imgH = imgW / ratio;
+                  }
+                  //
+                  path.data("resized-imgW", imgW);
+                  path.data("resized-imgH", imgH);
+                  path.css("background-size", "100%" +"100% ");
+              });
+          }
+          $(window).resize(backgroundResize);
+          $(window).focus(backgroundResize);
+          backgroundResize();
     });
     $(function() {      
-
       $("div[id*=listing]").swipe( {
         //Generic swipe handler for all directions
         swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
