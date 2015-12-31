@@ -13,8 +13,8 @@
 <body class="none">
   <div class="row">
     <div class="col s12 nav-bar" id="top">
-      <div class="col s8 ftext-left" >
-        <i class="material-icons" style="color:#C6C6C7; margin-top:5.5%;" onclick="$( '.nav-bar-menu' ).toggle();$( '.nav-bar-menu-close' ).toggle();">reorder</i>
+      <div class="col s8" >
+        <i class="material-icons ftext-left" style="color:#C6C6C7; margin-top:5.5%;" onclick="$( '.nav-bar-menu' ).toggle();$( '.nav-bar-menu-close' ).toggle();">reorder</i>
         <p class="text-bar" >Showing Suit Sign Up</p>
       </div>
       <div class="col s4" style="margin-top:4%;">      
@@ -32,7 +32,7 @@
     </div>
     <div class='nav-bar-menu'>
 
-          <div class="size col s12 div-userInfo ">
+          <div class="select-pop col s12 div-userInfo ">
             <div class="col s4 div-avatar">
                  <img src="imgs/backLoad.png" alt="" class="circle responsive-img">
             </div>
@@ -140,7 +140,7 @@
                   <font class="xsText break-line">Next Showing: 11/14/15</font>
             </div>
             <div class="col s4 listing-card">
-                <img src="img/house1.jpg" style="width:100% !important; height:163px !important;  " class="listing-card divLast" >
+                <img src="img/house1.jpg" style="width:100% !important; height:163px !important;  " class="listing-card" >
             </div>
         </div>
        <div class="col s12 listing-card divLast">
@@ -158,7 +158,7 @@
                   <font class="xsText break-line">Next Showing: 11/14/15</font>
             </div>
             <div class="col s4 listing-card">
-                <img src="img/house1.jpg" style="width:100% !important; height:163px !important;  " class="listing-card divLast" >
+                <img src="img/house1.jpg" style="width:100% !important; height:163px !important;  " class="listing-card" >
             </div>
         </div>
         <div class="col s12 listing-card divLast">
@@ -176,7 +176,7 @@
                   <font class="xsText break-line">Next Showing: 11/14/15</font>
             </div>
             <div class="col s4 listing-card">
-                <img src="img/house1.jpg" style="width:100% !important; height:163px !important;  " class="listing-card divLast" >
+                <img src="img/house1.jpg" style="width:100% !important; height:163px !important;  " class="listing-card" >
             </div>
         </div>
         <div class="col s12 listing-card divLast">
@@ -194,7 +194,7 @@
                   <font class="xsText break-line">Next Showing: 11/14/15</font>
             </div>
             <div class="col s4 listing-card">
-                <img src="img/house1.jpg" style="width:100% !important; height:163px !important;  " class="listing-card divLast" >
+                <img src="img/house1.jpg" style="width:100% !important; height:163px !important;  " class="listing-card" >
             </div>
         </div>
         
@@ -411,57 +411,57 @@
           </div>
         </div>
   </div>
-            <!-- <div class="center-text  back-blue text-white col s12 showingCard" >
-            <p>
+      <div class="card back-blue center-text padding-button">
+             <p class="text-white"> 
               SWIPE FOR NEXT LISTING
-              <i class="material-icons rotate  xlText">reply</i>
+              <i class="material-icons xlText rotate">reply</i>
             </p>
-        --> 
+      </div>
   <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
   <script type="text/javascript" src="js/materialize.min.js"></script>
   <script src="js/jquery.touchSwipe.min.js"></script>
-
-  <script>(function($){
-  $.fn.styleddropdown = function(){
-    return this.each(function(){
-      var obj = $(this); //the div .size
-      obj.find('.field').click(function() { //onclick event, 'list' fadein
-            obj.find('.list').fadeIn(400,function (argument) {
-                //Set listener to document when the select is fadein, and remove the listener when the user click somewhere
-                    $(document).click(function(event) {
-                          obj.find('.list').fadeOut(400,function(){ 
-                            $( document).off( "click" );
-                            console.log('ds');
+  <script>
+        /*popup selector jquery plugin code*/
+      (function($){
+        $.fn.styleddropdown = function(){
+          return this.each(function(){
+            var obj = $(this); //the div .size
+            obj.find('.field').click(function() { //onclick event, 'list' fadein
+                  obj.find('.list').fadeIn(400,function (argument) {
+                      //Set listener to document when the select is fadein, and remove the listener when the user click somewhere
+                          $(document).click(function(event) {
+                                obj.find('.list').fadeOut(400,function(){ 
+                                  $( document).off( "click" );
+                                  console.log('ds');
+                                });
+                          });                    
+                        $(".nav-bar-menu").click(function(event) {
+                                obj.find('.list').fadeOut(400,function(){ 
+                                  $( ".nav-bar-menu").off( "click" );
+                                  console.log('ds');
+                                });
                           });
-                    });                    
-                  $(".nav-bar-menu").click(function(event) {
-                          obj.find('.list').fadeOut(400,function(){ 
-                            $( ".nav-bar-menu").off( "click" );
-                            console.log('ds');
+                        $(".nav-bar").click(function(event) {
+                                obj.find('.list').fadeOut(400,function(){ 
+                                  $( ".nav-bar-menu").off( "click" );
+                                  console.log('ds');
+                                });
                           });
-                    });
-                  $(".nav-bar").click(function(event) {
-                          obj.find('.list').fadeOut(400,function(){ 
-                            $( ".nav-bar-menu").off( "click" );
-                            console.log('ds');
-                          });
-                    });
-            });        
-            obj.find('.list').hover(function(){ },function(){
-                $(this).fadeOut(400);
+                  });        
+                  obj.find('.list').hover(function(){ },function(){
+                      $(this).fadeOut(400);
+                  });
             });
-      });
-      obj.find('.list li').click(function() { //onclick event, change field value with selected 'list' item and fadeout 'list'
-          console.log($(this).index());
-      });
+            obj.find('.list li').click(function() { //onclick event, change field value with selected 'list' item and fadeout 'list'
+                console.log($(this).index());
+            });
 
-    });
-  };
-})(jQuery);
-      $(document).ready(function() {
-      $(function(){
-        $('.size').styleddropdown();
-      });
+          });
+        };
+      })(jQuery);
+ $('ul.tabs').tabs();
+      $(document).ready(function() { $('ul.tabs').tabs();
+        $('.select-pop').styleddropdown();
         var w = $(window).width() * 0.85;
         var wf = $(window).width();
         var h = $(window).height();
@@ -470,18 +470,15 @@
         $('.nav-bar-menu-close').css('width', wf);
         $('.nav-bar-menu-close').css('height', h);
 
-             /* fix vertical when not overflow
+          /* fix vertical when not overflow
           call fullscreenFix() if .fullscreen content changes */
           function fullscreenFix(){
-              var h = $('body').height();
-              // set .fullscreen height
+              var h = $('body').height();// set .fullscreen height
               $(".content-b").each(function(i){
                   if($(this).innerHeight() > h){ $(this).closest(".fullscreen").addClass("overflow");
                   }
               });
           }
-          $(window).resize(fullscreenFix);
-          fullscreenFix();
           /* resize background images */
           function backgroundResize(){
               var windowH = $(window).height();
@@ -510,17 +507,13 @@
                       imgW = contW;
                       imgH = imgW / ratio;
                   }
-                  //
-                  path.data("resized-imgW", imgW);
-                  path.data("resized-imgH", imgH);
                   path.css("background-size", "100%" +"100% ");
               });
           }
-          $(window).resize(backgroundResize);
-          $(window).focus(backgroundResize);
+
           backgroundResize();
-    });
-    $(function() {      
+          fullscreenFix();
+     
       $("div[id*=listing]").swipe( {
         //Generic swipe handler for all directions
         swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
@@ -531,6 +524,8 @@
           console.log(direction);
         },
       });
+
+
       $(".nav-bar-menu, .nav-bar-menu-close").swipe( {
         //Generic swipe handler for all directions
         swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
@@ -540,7 +535,10 @@
           console.log(direction);
         },
       });
+
     });
+
+
   </script>
  </body>
 </html>
