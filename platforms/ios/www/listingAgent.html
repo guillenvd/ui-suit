@@ -13,27 +13,26 @@
 <body class="none">
   <div class="row">
     <div class="col s12 nav-bar" id="top">
-      <div class="col s8" >
-        <i class="material-icons " style="color:#C6C6C7; margin-top:5.5%;" onclick=" $( '.nav-bar-menu' ).toggle();">reorder</i>
+      <div class="col s8 ftext-left" >
+        <i class="material-icons" style="color:#C6C6C7; margin-top:5.5%;" onclick="$( '.nav-bar-menu' ).toggle();$( '.nav-bar-menu-close' ).toggle();">reorder</i>
         <p class="text-bar" >Showing Suit Sign Up</p>
       </div>
       <div class="col s4" style="margin-top:4%;">      
         <div class="col s1" >
           <i class="material-icons" style="color:#C6C6C7;">notifications_none</i>
         </div>
-        <div class="col s1" style="margin-left:20%">
+        <div class="col s1" style="margin-left:20%;">
           <i class="material-icons" style="color:#C6C6C7;">search</i>
         </div>
       </div>
     </div>
 
 
-
-
-
+    <div class='nav-bar-menu-close'  onclick="$( '.nav-bar-menu' ).toggle();$( '.nav-bar-menu-close' ).toggle();">
+    </div>
     <div class='nav-bar-menu'>
 
-          <div class="col s12 div-userInfo">
+          <div class="size col s12 div-userInfo ">
             <div class="col s4 div-avatar">
                  <img src="imgs/backLoad.png" alt="" class="circle responsive-img">
             </div>
@@ -47,9 +46,17 @@
                 Change<br>nav type
               </p>
               <p>
-                <i class="material-icons " style="color:#686868;">view_carousel</i>
-              </p>
+                <i class="material-icons field" style="color:#686868;">view_carousel</i>
+               </p>
             </div>
+            <ul class="list">
+              <li class="title-select">choose navigation menu</li>
+              <li>Showing Note</li>
+              <li>Buyer's Agent Nav</li>
+              <li>Listing Agent Nav
+                    <i class="menu-icons check-down">check</i>
+              </li>
+            </ul>
           </div>
 
 
@@ -83,9 +90,7 @@
               <div class="div-opt ">
                 <i class="menu-icons ">highlight_off</i>Sign
               </div>
-              <div class="div-opt " onclick=" $( '.nav-bar-menu' ).toggle();">
-                <i class="menu-icons ">highlight_off</i>close
-              </div>
+
 
            </div>
 
@@ -97,14 +102,14 @@
 
 
 
-    <div style="width:100%; height:44px; display:block;"></div>
+    <div style="width:100%; height:54px; display:block;"></div>
     <ul class="tabs" style="">
         <li class="tab col s3"><a class="active" href="#lContent">LISTINGS</a></li>
         <li class="tab col s3"><a href="#sContent">SHOWINGS</a></li>
         <li class="tab col s3"><a href="#cContent">CALENDAR</a></li>
     </ul>
     <div id="lContent" ><!-- content of listing seccion -->
-        <div class="not-fullscreen background" style="background-image:url('http://www.iroonie.com/wp-content/uploads/2010/05/minimalist-dining-room-idea.jpg');" data-img-width="1600" data-img-height="1064">
+        <div class="not-fullscreen background" style="background-image:url('img/house1.jpg');" data-img-width="1600" data-img-height="1064">
             <div class="content-a">
                 <div class="content-b">
                   <p class="pWhite">
@@ -119,6 +124,7 @@
                 </div>
             </div>
         </div>
+
         <div class="col s12 listing-card divLast">
             <div class="col s8 text-grey " style="margin-top:25px;">
                 <div class="col s12 listing-card">
@@ -413,15 +419,56 @@
         --> 
   <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
   <script type="text/javascript" src="js/materialize.min.js"></script>
-    <script src="js/jquery.touchSwipe.min.js"></script>
+  <script src="js/jquery.touchSwipe.min.js"></script>
 
-  <script>
+  <script>(function($){
+  $.fn.styleddropdown = function(){
+    return this.each(function(){
+      var obj = $(this); //the div .size
+      obj.find('.field').click(function() { //onclick event, 'list' fadein
+            obj.find('.list').fadeIn(400,function (argument) {
+                //Set listener to document when the select is fadein, and remove the listener when the user click somewhere
+                    $(document).click(function(event) {
+                          obj.find('.list').fadeOut(400,function(){ 
+                            $( document).off( "click" );
+                            console.log('ds');
+                          });
+                    });                    
+                  $(".nav-bar-menu").click(function(event) {
+                          obj.find('.list').fadeOut(400,function(){ 
+                            $( ".nav-bar-menu").off( "click" );
+                            console.log('ds');
+                          });
+                    });
+                  $(".nav-bar").click(function(event) {
+                          obj.find('.list').fadeOut(400,function(){ 
+                            $( ".nav-bar-menu").off( "click" );
+                            console.log('ds');
+                          });
+                    });
+            });        
+            obj.find('.list').hover(function(){ },function(){
+                $(this).fadeOut(400);
+            });
+      });
+      obj.find('.list li').click(function() { //onclick event, change field value with selected 'list' item and fadeout 'list'
+          console.log($(this).index());
+      });
+
+    });
+  };
+})(jQuery);
       $(document).ready(function() {
+      $(function(){
+        $('.size').styleddropdown();
+      });
         var w = $(window).width() * 0.85;
+        var wf = $(window).width();
         var h = $(window).height();
         $('.nav-bar-menu').css('width', w);
         $('.nav-bar-menu').css('height', h);
-
+        $('.nav-bar-menu-close').css('width', wf);
+        $('.nav-bar-menu-close').css('height', h);
 
              /* fix vertical when not overflow
           call fullscreenFix() if .fullscreen content changes */
@@ -480,6 +527,15 @@
         if ( direction != 'up' && direction != 'down'){  
            console.log( $(this).index() );
            $(this).hide(); 
+          }
+          console.log(direction);
+        },
+      });
+      $(".nav-bar-menu, .nav-bar-menu-close").swipe( {
+        //Generic swipe handler for all directions
+        swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
+        if ( direction =='left'){  
+           $( '.nav-bar-menu' ).toggle();$( '.nav-bar-menu-close' ).toggle();
           }
           console.log(direction);
         },

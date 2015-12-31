@@ -90,9 +90,7 @@
               <div class="div-opt ">
                 <i class="menu-icons ">highlight_off</i>Sign
               </div>
-              <div class="div-opt " onclick=" $( '.nav-bar-menu' ).toggle();">
-                <i class="menu-icons ">highlight_off</i>close
-              </div>
+
 
            </div>
 
@@ -429,11 +427,24 @@
       var obj = $(this); //the div .size
       obj.find('.field').click(function() { //onclick event, 'list' fadein
             obj.find('.list').fadeIn(400,function (argument) {
-                //Set listener to document when the select is fadein, and remove the listener when
-                // the user click somewhere
-                    $('html').click(function(event) {
-                          obj.find('.field').val($(this).html());
-                          obj.find('.list').fadeOut(400,function(){ $( "html").unbind( "click" );});
+                //Set listener to document when the select is fadein, and remove the listener when the user click somewhere
+                    $(document).click(function(event) {
+                          obj.find('.list').fadeOut(400,function(){ 
+                            $( document).off( "click" );
+                            console.log('ds');
+                          });
+                    });                    
+                  $(".nav-bar-menu").click(function(event) {
+                          obj.find('.list').fadeOut(400,function(){ 
+                            $( ".nav-bar-menu").off( "click" );
+                            console.log('ds');
+                          });
+                    });
+                  $(".nav-bar").click(function(event) {
+                          obj.find('.list').fadeOut(400,function(){ 
+                            $( ".nav-bar-menu").off( "click" );
+                            console.log('ds');
+                          });
                     });
             });        
             obj.find('.list').hover(function(){ },function(){
@@ -447,9 +458,10 @@
     });
   };
 })(jQuery);
-      $(document).ready(function() {$(function(){
-  $('.size').styleddropdown();
-});
+      $(document).ready(function() {
+      $(function(){
+        $('.size').styleddropdown();
+      });
         var w = $(window).width() * 0.85;
         var wf = $(window).width();
         var h = $(window).height();

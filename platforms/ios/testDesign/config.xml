@@ -35,10 +35,6 @@
     <allow-intent href="sms:*" />
     <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />
-    <preference name="SplashScreen" value="none" />
-    <preference name="show-splash-screen-spinner" value="false" />
-    <preference name="auto-hide-splash-screen" value="false" />
-    <gap:plugin name="org.apache.cordova.splashscreen" />
     <content src="index.html" />
     <preference name="StatusBarOverlaysWebView" value="true" />
     <preference name="StatusBarBackgroundColor" value="#000000" />

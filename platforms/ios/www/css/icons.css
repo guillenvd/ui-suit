@@ -368,9 +368,12 @@
     display: block;
   }   
   .nav-bar{
+    left: 0em !important; 
+    right: 0em !important; 
+    margin-right: 0px !important;
+    margin-left: 0px !important;
     background-color:rgb(55, 61, 74) !important; 
-    color:#C6C6C7 !important;
-    padding: 14px 0px 0px 0px !important;
+    padding: 14px 0px 10px 0px !important;
 
   }
   .margin-bt{
@@ -390,7 +393,20 @@
     display: none;
     margin-right: 0px !important;
     margin-left: 0px !important;
-
+    overflow: scroll;
+  }
+  .nav-bar-menu-close{
+    z-index: 3!important;
+    background-color:rgba(32, 33, 42,0.8)!important;
+    margin: 0em !important;
+    left: 0em !important; 
+    right: 0em !important; 
+    top: 0em !important;
+    position: fixed;
+    display: none;
+    margin-right: 0px !important;
+    margin-left: 0px !important;
+    overflow: scroll;
   }
   .div-userInfo{
         padding: 20px 0px 20px 15px !important;
@@ -450,3 +466,60 @@
           padding: 2%;
         }
     }
+    .size { 
+        position:relative;
+    }
+    .size{
+      -webkit-transition: all .4s ease-in-out;
+      transition: all .4s ease-in-out;
+    }
+    .size>ul.list { 
+      display:none;  
+      border:solid 1px rgb(81, 133, 193) !important;
+      position:absolute;
+      width: 92%  !important;
+      top: 85% !important;       
+      z-index:999;
+      margin:0;  
+      list-style:none;
+      background:#fff;
+      color:#333;
+      -moz-border-radius:20px; 
+      webkit-border-radius:20px; 
+      border-radius:20px;
+      -moz-box-shadow:0 0 20px #999; 
+      -webkit-box-shadow:0 0 20px #999; 
+      box-shadow:0 0 20px #999
+    }
+    .size>ul.list li {
+      border-top: solid 1px #ccc;
+      padding-left: 20px;
+      padding-bottom:10px;
+      padding-top:10px;
+      text-align: left !important;
+    }
+    .size>ul.list li:hover {
+      background:rgb(81, 133, 193) !important; 
+      color:#fff !important;
+    }
+    .size>ul.list li.title-select { 
+      text-transform: uppercase !important;
+      color:  #919191 !important;
+      border:none !important;
+      font-size: 12px;  pointer-events: none;
+       cursor: default;
+    }
+    .check-down{
+      font-size:20px; color:#1980FA; float:right !important; margin-right:20px;
+    }
+
+.popover-arrow {
+  position: absolute;
+  top: -18px;
+  left: 82.5%;
+  border-left: 16px solid transparent;
+  border-right: 16px solid transparent;
+  border-bottom: 18px solid white;
+  width: 0;
+  height: 0;
+  }
