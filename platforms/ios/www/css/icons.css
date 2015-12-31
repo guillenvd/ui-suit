@@ -101,18 +101,7 @@
      box-shadow: 0 1px 0 0 #fff;
       color: #fff;
    }
-  /* valid color */
-  .input-field input[type=text].valid,.input-field input[type=password].valid {
-     border-bottom: 1px solid #fff;
-     box-shadow: 0 1px 0 0 #fff;
-      color: #fff;
-   }
-  /* invalid color */
-  .input-field input[type=text].invalid,.input-field input[type=password].invalid {
-     border-bottom: 1px solid #fff;
-     box-shadow: 0 1px 0 0 #fff;
-      color: #fff;
-   }
+
   /* icon prefix focus color */
   .input-field .prefix.active {
      color: #fff;
@@ -453,6 +442,23 @@
     border-top:solid #CECECE 2px  !important;
     margin-left: 20px;
   }
+  .div-opt-noborde{
+    padding: 10px 0px 10px 10px !important;
+    border-top:solid #CECECE 0px  !important;
+    margin-left: 20px;
+  }
+
+  .div-opt:hover{
+    background-color:  #CECECE ;
+    
+  }
+  .div-opt-noborde:hover{
+    background-color:  #CECECE ;
+
+  }
+
+
+
 
 
 
