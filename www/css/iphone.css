@@ -38,7 +38,7 @@
     overflow: hidden;
     padding: 0;
     position: relative;
-    height: 258px;
+    height: 278px;
     width: 205px;
     margin-top: -15px;
     margin-bottom: -10px;
@@ -66,8 +66,8 @@
 .cardPhone{  
     text-align: center;
     float: center;
-    padding-top: 13% !important;
-    padding-bottom: 13% !important;
+    padding-top: 15% !important;
+    padding-bottom: 15% !important;
   }
 @media screen and (min-width:414px ), screen and (min-height:667px ){
     #screen {
